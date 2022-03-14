@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  mariadb:
+    image: mariadb:10.6.7-focal
+    container_name: ${DOCKER_CONTAINER_NAME}
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+    ports:
+      - ${DOCKER_MARIADB_PORT}:3306
+
+  mariadb-adminer:
+    container_name: ${DOCKER_CONTAINER_ADMINER_NAME}
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - ${DOCKER_ADMINER_PORT}:8080
