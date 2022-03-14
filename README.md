@@ -7,5 +7,5 @@
 
 далее используйте следующую команду:
 ```
-docker-compose run -d
+docker-compose up -d
 ```
