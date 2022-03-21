@@ -12,7 +12,6 @@ services:
       - ${DOCKER_MARIADB_PORT}:3306
     volumes:
       - ${DOCKER_MARIADB_VOLUME}:/var/lib/mysql
-      - ./mysql:/etc/mysql
 
   mariadb-adminer:
     container_name: ${DOCKER_CONTAINER_ADMINER_NAME}
