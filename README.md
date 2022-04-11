@@ -13,6 +13,12 @@ docker-compose up -d
 # Примечание
 Можно вручную удалить установку ADMINER отредактировав файл .env и docker-compose.yml
 
+## Подключение другого Docker контейнера к сети MariaDB
+```
+docker network connect mariadb_default another-docker
+```
+после чего можно указывать имя mariadb в качестве хоста для подключения
+
 # Полезные команды
 
 ### Подключение к базе данных
