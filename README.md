@@ -15,7 +15,13 @@ docker-compose up -d
 
 # Полезные команды
 
+### Подключение к базе данных
+```
+mysql -uroot -pPassword -h 192.168.0.100
+```
+
 ### Создание базы данных
+
 ```
 CREATE DATABASE mydatabase CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
