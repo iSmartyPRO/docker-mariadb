@@ -50,3 +50,11 @@ GRANT ALL PRIVILEGES ON mydatabase.* TO 'username'@'%';
 ```
 FLUSH PRIVILEGES;
 ```
+
+в дополнении рекомендую использовать единую сеть для всех контейнеров, для этого отредактировав docker-compose.yml добавив следующие строки:
+```
+networks:
+  default:
+    external:
+      name: "docker-lan"
+```
