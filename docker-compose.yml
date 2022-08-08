@@ -13,9 +13,7 @@ services:
     volumes:
       - ${DOCKER_MARIADB_VOLUME}:/var/lib/mysql
 
-  mariadb-adminer:
-    container_name: ${DOCKER_CONTAINER_ADMINER_NAME}
-    image: adminer
-    restart: unless-stopped
-    ports:
-      - ${DOCKER_ADMINER_PORT}:8080
+networks:
+  default:
+    external:
+      name: "docker-lan"
